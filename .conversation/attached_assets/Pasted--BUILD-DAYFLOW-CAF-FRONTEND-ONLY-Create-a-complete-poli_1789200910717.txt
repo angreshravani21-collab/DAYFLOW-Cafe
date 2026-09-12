@@ -1,0 +1,1594 @@
+# BUILD DAYFLOW CAFÉ — FRONTEND ONLY
+
+Create a complete, polished, responsive frontend web application called **DAYFLOW Café**.
+
+## 🚨 ABSOLUTE RULE: FRONTEND ONLY
+
+I am building the backend/database separately later.
+
+For this build, **DO NOT create or configure any backend whatsoever.**
+
+DO NOT use:
+
+* Supabase
+* Firebase
+* PostgreSQL
+* MongoDB
+* Prisma
+* API routes
+* Server actions
+* Authentication services
+* External databases
+* Backend APIs
+* Payment systems
+
+Do NOT spend time setting up database schemas.
+
+Use only:
+
+* React
+* TypeScript
+* Tailwind CSS
+* frontend state
+* localStorage only where useful
+* mock/static data
+* frontend animation libraries if needed
+* chart libraries if needed
+
+The entire application must run immediately as a frontend prototype.
+
+The architecture should remain clean so a real database can be connected later.
+
+---
+
+# PRODUCT
+
+The app is called:
+
+# DAYFLOW ☕
+
+Tagline:
+
+**“Get your work done. Take your breaks. Romanticize the grind.”**
+
+DAYFLOW is a productivity/work-tracking app combining:
+
+* Attendance
+* Punch in / punch out
+* Task management
+* Progress tracking
+* Pomodoro focus timer
+* Break timer
+* Cozy café mini-game
+* Daily journal
+* Analytics
+* Productivity streaks
+* Achievements
+* Settings
+
+The key differentiator is that it feels like a **cozy digital café**, not a boring corporate employee dashboard.
+
+Think:
+
+**modern SaaS + Notion + cozy café + tiny relaxing game**
+
+---
+
+# IMPORTANT PRODUCT FLOW
+
+The first screen must be:
+
+## LOGIN
+
+The dashboard must NOT appear first.
+
+User sees:
+
+Login / Sign Up
+
+↓
+
+Dashboard
+
+↓
+
+All other application features
+
+For now, Login and Signup are **frontend-only visual interactions**.
+
+Clicking Login can simply navigate into the app using mock frontend state.
+
+There must be NO real authentication service.
+
+---
+
+# DESIGN DIRECTION
+
+The UI should feel:
+
+* premium
+* cozy
+* modern
+* playful
+* sophisticated
+* slightly Gen-Z
+* visually satisfying
+* warm
+* relaxing
+* portfolio-worthy
+
+Do NOT make it:
+
+* corporate
+* boring
+* generic
+* overly childish
+* overly cartoonish
+* cluttered
+* excessive glassmorphism
+
+The product should look like something a real startup could launch.
+
+---
+
+# COLOR SYSTEM
+
+Primary colors:
+
+* warm cream
+* coffee brown
+* espresso
+* soft beige
+* dusty pink
+* muted lavender
+* sage
+* warm white
+* charcoal
+
+Use colors consistently.
+
+Create CSS variables/design tokens so the palette can easily be changed later.
+
+---
+
+# TYPOGRAPHY
+
+Use:
+
+### UI font
+
+Inter / Geist / DM Sans
+
+### Display font
+
+Fraunces / Playfair Display / Instrument Serif
+
+Use the display font for:
+
+* major headings
+* café messages
+* special numbers
+* quotes
+
+Keep body text clean and modern.
+
+---
+
+# LOGIN PAGE
+
+Route:
+
+`/login`
+
+Create an extremely polished login screen.
+
+Desktop layout:
+
+Two columns.
+
+### LEFT
+
+Large DAYFLOW branding.
+
+DAYFLOW ☕
+
+Headline:
+
+**Make productivity feel good.**
+
+Supporting text:
+
+> “Get your work done. Take your breaks. Romanticize the grind.”
+
+Create a beautiful original cozy café visual.
+
+Possible elements:
+
+* coffee machine
+* coffee cup
+* small plant
+* warm lamp
+* notebook
+* tiny decorative stars
+* subtle steam
+* café counter
+
+Keep it elegant.
+
+Add tiny floating decorative elements:
+
+☕ ✦ ♡ ☁ ✿
+
+### RIGHT
+
+Login card.
+
+Heading:
+
+**Welcome back ☕**
+
+Subtitle:
+
+**Ready to make today count?**
+
+Fields:
+
+Email
+
+Password
+
+Button:
+
+**Log in**
+
+Divider:
+
+**or**
+
+Button:
+
+**Continue with Google**
+
+Text:
+
+**New here? Create an account**
+
+Clicking it switches to Signup.
+
+---
+
+# SIGNUP UI
+
+Signup should exist in the same authentication experience.
+
+Fields:
+
+* Name
+* Email
+* Password
+* Confirm password
+
+Button:
+
+**Create my DAYFLOW**
+
+Add smooth transition between Login and Signup.
+
+No backend authentication.
+
+---
+
+# APP SHELL
+
+Once inside the app, use a persistent layout.
+
+Desktop:
+
+LEFT SIDEBAR.
+
+Top:
+
+**DAYFLOW ☕**
+
+Navigation:
+
+🏠 Home
+✓ Tasks
+🕐 Attendance
+⏱ Focus
+☕ Break Café
+📔 Journal
+📊 Analytics
+🏆 Achievements
+⚙ Settings
+
+Bottom of sidebar:
+
+Avatar
+
+**Shravani**
+
+Small status:
+
+☕ productivity mode
+
+Logout.
+
+---
+
+# MOBILE
+
+Do NOT simply shrink the desktop sidebar.
+
+Create a proper mobile experience.
+
+Mobile:
+
+Top header
+
+Bottom navigation:
+
+🏠 Home
+
+✓ Tasks
+
+⏱ Focus
+
+☕ Café
+
+📊 Analytics
+
+Put secondary pages inside a menu.
+
+---
+
+# DASHBOARD
+
+Route:
+
+`/dashboard`
+
+Header:
+
+**Good morning, Shravani ☀️**
+
+Subtitle:
+
+**Let’s make today a good one.**
+
+Display:
+
+**Saturday, September 12**
+
+Use a realistic mock date/data system.
+
+---
+
+# HERO PRODUCTIVITY CARD
+
+Large beautiful card.
+
+Heading:
+
+**Today's Progress**
+
+Large:
+
+**72%**
+
+Create animated circular progress.
+
+Supporting text:
+
+**You're doing pretty good 👀**
+
+Stats:
+
+4 tasks completed
+
+2 remaining
+
+2 focus sessions
+
+5h 18m tracked
+
+---
+
+# ATTENDANCE CARD
+
+Create a visually attractive attendance widget.
+
+Heading:
+
+**Workday**
+
+Status:
+
+🟢 Currently working
+
+Show:
+
+Punch in
+
+**09:42 AM**
+
+Live work timer:
+
+**04h 37m**
+
+Large button:
+
+**Punch Out**
+
+Clicking Punch Out should visually change the card to:
+
+🔴 Workday ended
+
+Punch out:
+
+**06:11 PM**
+
+Total:
+
+**8h 29m**
+
+This is only frontend mock behavior.
+
+---
+
+# TASK PREVIEW
+
+Heading:
+
+**Today's Tasks**
+
+Show task cards.
+
+Example:
+
+### Finish UI design
+
+🔴 High
+
+🎨 Design
+
+In progress
+
+---
+
+### Update documentation
+
+🟢 Done
+
+💻 Work
+
+---
+
+### Research competitors
+
+🟡 Medium
+
+🔎 Research
+
+---
+
+Use realistic mock tasks.
+
+Allow checking tasks complete.
+
+When completed:
+
+* animate checkbox
+* strike through title
+* update progress
+* show toast
+
+Example toast:
+
+**One less thing haunting you. ✨**
+
+---
+
+# TASK PAGE
+
+Route:
+
+`/tasks`
+
+Heading:
+
+**Your tasks ✨**
+
+Subheading:
+
+**Let’s get some things off that list.**
+
+Button:
+
+**+ New Task**
+
+Create a beautiful task board.
+
+Columns:
+
+## TO DO
+
+## IN PROGRESS
+
+## DONE
+
+Cards should visually support drag and drop.
+
+Each card:
+
+* title
+* description
+* priority
+* category
+* due date
+* estimated time
+* progress
+
+---
+
+# CREATE TASK MODAL
+
+Click:
+
+**+ New Task**
+
+Open polished modal.
+
+Fields:
+
+Task title
+
+Description
+
+Priority
+
+* Low
+* Medium
+* High
+* Urgent
+
+Category
+
+* Work
+* Study
+* Personal
+* Design
+* Research
+
+Due date
+
+Estimated minutes
+
+Button:
+
+**Add task**
+
+Task appears immediately in the UI.
+
+---
+
+# FOCUS PAGE
+
+Route:
+
+`/focus`
+
+This should be one of the most beautiful pages.
+
+Heading:
+
+**Deep Focus**
+
+Subtitle:
+
+**We're locking in. 🔒**
+
+Huge timer:
+
+# 24:37
+
+Modes:
+
+🍅 Focus
+
+☕ Short Break
+
+🌙 Long Break
+
+Default:
+
+25 minutes
+
+Short break:
+
+5 minutes
+
+Long break:
+
+15 minutes
+
+Buttons:
+
+▶ Start
+
+⏸ Pause
+
+↻ Reset
+
+---
+
+# FOCUS ENVIRONMENT
+
+Create subtle cozy café ambience around the timer.
+
+Include:
+
+* coffee cup
+* soft steam
+* tiny floating particles
+* desk
+* lamp
+* subtle clock
+* warm café atmosphere
+
+Do NOT distract from the timer.
+
+---
+
+# TIMER BEHAVIOR
+
+Before starting:
+
+**Ready to lock in? 🔒**
+
+During:
+
+**We're locked in.**
+
+When finished:
+
+Create celebratory modal.
+
+🎉
+
+**Focus session complete!**
+
+**You just gave Future You a little gift.**
+
+Show:
+
+25 minutes focused
+
+Button:
+
+**Take a break ☕**
+
+Navigate to Break Café.
+
+---
+
+# BREAK CAFÉ
+
+Route:
+
+`/break`
+
+This is the fun feature.
+
+Heading:
+
+# ☕ Break Café
+
+Subtitle:
+
+**You worked. Now breathe.**
+
+Create a beautiful cozy café environment.
+
+Visual elements:
+
+* café counter
+* espresso machine
+* cups
+* ingredients
+* shelves
+* plants
+* warm lighting
+* small decorations
+* original café customers
+* optional cute cat
+
+---
+
+# MINI CAFÉ GAME
+
+Create a small original drink-making mini-game.
+
+It should feel satisfying and relaxing.
+
+IMPORTANT:
+
+This must be ORIGINAL.
+
+Do not copy any existing game's:
+
+* characters
+* artwork
+* names
+* logos
+* dialogue
+* interface
+* exact mechanics presentation
+
+The inspiration is only the feeling of:
+
+**customer → order → prepare → serve → reward**
+
+---
+
+# CUSTOMER
+
+Show an original customer.
+
+Example:
+
+**Maya**
+
+Speech bubble:
+
+> “Hey! Could I get an iced vanilla latte? 🧊”
+
+Order card displays the requested drink.
+
+---
+
+# DRINK BUILDER
+
+User creates the drink.
+
+## STEP 1 — CUP
+
+Small
+
+Medium
+
+Large
+
+## STEP 2 — ICE
+
+No ice
+
+Light
+
+Normal
+
+Extra
+
+## STEP 3 — COFFEE
+
+Espresso
+
+Cold Brew
+
+Decaf
+
+## STEP 4 — MILK
+
+Regular
+
+Oat
+
+Almond
+
+## STEP 5 — FLAVOR
+
+Vanilla
+
+Caramel
+
+Hazelnut
+
+None
+
+Then:
+
+# Serve ☕
+
+---
+
+# COFFEE MACHINE
+
+Create a satisfying frontend animation.
+
+Sequence:
+
+1. cup appears
+2. machine activates
+3. coffee pours
+4. milk fills
+5. ice drops
+6. syrup appears
+7. steam
+8. sparkle
+9. customer receives drink
+
+Animation duration:
+
+approximately 5–10 seconds.
+
+Allow skipping.
+
+---
+
+# GAME RESULT
+
+Correct:
+
+✨ **PERFECT ORDER**
+
+Text:
+
+**Okayyy barista era activated.**
+
+Reward:
+
+☕ +10 Café Coins
+
+Partially correct:
+
+**Not exactly what they ordered… but honestly? still cute.**
+
+Reward:
+
+☕ +5
+
+Wrong:
+
+**Oops 😭 let's try again.**
+
+---
+
+# BREAK TIMER
+
+Show:
+
+### Break remaining
+
+# 04:32
+
+Add:
+
+**Skip activity**
+
+When timer finishes:
+
+**Break's over. Back to the grind ☕**
+
+Button:
+
+**Return to Focus**
+
+---
+
+# CAFÉ COINS
+
+Display:
+
+☕ **120 Café Coins**
+
+Allow coins to unlock cosmetic café upgrades.
+
+Examples:
+
+* upgraded coffee machine
+* mugs
+* plants
+* wall art
+* lights
+* bookshelf
+* cat bed
+* counter decorations
+
+These are only frontend visual states.
+
+---
+
+# CAFÉ CAT
+
+Create a tiny ORIGINAL café cat.
+
+Name:
+
+**Mochi**
+
+Mochi can appear around the café.
+
+Occasional speech:
+
+> “Mochi approves.”
+
+> “Mochi says take a break.”
+
+> “Mochi is judging your productivity.”
+
+Keep it subtle.
+
+---
+
+# JOURNAL
+
+Route:
+
+`/journal`
+
+Heading:
+
+**Daily thoughts 🌿**
+
+Create a beautiful journal interface.
+
+Sections:
+
+### What did I accomplish?
+
+Textarea
+
+### What was difficult?
+
+Textarea
+
+### What's tomorrow's focus?
+
+Textarea
+
+### Rate your day
+
+⭐⭐⭐⭐⭐
+
+Button:
+
+**Save today's journal**
+
+Use local state/localStorage.
+
+Display previous mock entries as journal cards.
+
+---
+
+# ANALYTICS
+
+Route:
+
+`/analytics`
+
+Heading:
+
+**Your productivity story 📊**
+
+Summary cards:
+
+### Focus Time
+
+18h 42m
+
+### Tasks Completed
+
+47
+
+### Attendance
+
+94%
+
+### Current Streak
+
+7 days 🔥
+
+---
+
+# CHARTS
+
+Use a frontend chart library such as Recharts.
+
+Create:
+
+### Weekly Focus
+
+Bar chart
+
+### Task Completion
+
+Line chart
+
+### Attendance
+
+Calendar heatmap
+
+### Productivity Score
+
+Large circular score:
+
+**82 / 100**
+
+Message:
+
+**You're finding your rhythm.**
+
+Use attractive mock data.
+
+---
+
+# ATTENDANCE PAGE
+
+Route:
+
+`/attendance`
+
+Create monthly calendar.
+
+States:
+
+🟢 Present
+
+🟡 Partial
+
+🔴 Absent
+
+⚪ No data
+
+Clicking a day opens details.
+
+Example:
+
+Punch in:
+
+09:42 AM
+
+Punch out:
+
+06:11 PM
+
+Total:
+
+8h 29m
+
+Also include a weekly/monthly summary.
+
+---
+
+# ACHIEVEMENTS
+
+Route:
+
+`/achievements`
+
+Create a beautiful achievement gallery.
+
+Examples:
+
+🏆 First Day
+
+🔥 7-Day Streak
+
+🍅 10 Focus Sessions
+
+☕ Café Regular
+
+💪 Task Crusher
+
+🌙 Night Owl
+
+✨ Perfect Week
+
+Unlocked achievements:
+
+Beautiful card + subtle glow.
+
+Locked achievements:
+
+🔒
+
+**Keep going…**
+
+---
+
+# STREAK
+
+Create a prominent streak widget.
+
+🔥
+
+# 7
+
+**day streak**
+
+Text:
+
+**Don't break the chain 👀**
+
+Show streak history when clicked.
+
+---
+
+# SETTINGS
+
+Route:
+
+`/settings`
+
+Sections:
+
+### Profile
+
+Name
+
+Email
+
+Avatar
+
+### Appearance
+
+Light Mode
+
+Dark Mode
+
+### Focus
+
+Focus duration
+
+Short break
+
+Long break
+
+### Productivity
+
+Daily target
+
+### Notifications
+
+Toggle
+
+### Café
+
+Sound effects
+
+Animations
+
+### Account
+
+Logout
+
+All frontend only.
+
+---
+
+# DARK MODE
+
+Create a dedicated:
+
+# Late Night Café 🌙
+
+theme.
+
+Do NOT simply invert the interface.
+
+Dark mode should feel intentionally designed.
+
+Use:
+
+* espresso brown
+* charcoal
+* muted purple
+* warm cream
+* soft amber
+
+---
+
+# MICROCOPY
+
+Use fun little messages throughout the interface.
+
+Examples:
+
+**okayyy we cooked ☕**
+
+**One less thing haunting you.**
+
+**Brain loading… ☕**
+
+**Look at you being productive.**
+
+**Tiny break. Big comeback.**
+
+**You survived another focus session.**
+
+**Your future self says thanks.**
+
+**No thoughts. Just tasks.**
+
+**We're locking in.**
+
+**Productivity, but make it cute.**
+
+Use these naturally, not everywhere.
+
+---
+
+# ANIMATIONS
+
+Use tasteful animations.
+
+Include:
+
+* page transitions
+* card hover
+* button press
+* progress animations
+* timer transitions
+* task completion
+* modal entrance
+* coffee steam
+* coffee pouring
+* café machine sequence
+* achievement unlock
+* toast notifications
+
+Use Framer Motion if useful.
+
+Respect reduced-motion preferences.
+
+---
+
+# TOASTS
+
+Create beautiful toast notifications.
+
+Examples:
+
+✅ Task completed!
+
+☕ Break started!
+
+🔥 Streak increased!
+
+💾 Journal saved!
+
+✨ Achievement unlocked!
+
+---
+
+# EMPTY STATES
+
+Never show ugly blank screens.
+
+Tasks:
+
+**No tasks yet 👀**
+
+**Let's give Future You something to thank you for.**
+
+Button:
+
+**Create a task**
+
+Journal:
+
+**Your thoughts deserve a little space.**
+
+Analytics:
+
+**Start using DAYFLOW and your productivity story will appear here.**
+
+---
+
+# LOADING STATES
+
+Create polished skeleton loaders.
+
+No ugly default loading indicators.
+
+---
+
+# RESPONSIVE DESIGN
+
+The entire application must work beautifully on:
+
+* desktop
+* laptop
+* tablet
+* mobile
+
+Mobile layouts should be intentionally designed.
+
+---
+
+# ACCESSIBILITY
+
+Include:
+
+* semantic HTML
+* accessible buttons
+* labels
+* keyboard navigation
+* visible focus states
+* readable contrast
+* responsive typography
+* reduced motion support
+
+---
+
+# COMPONENT ARCHITECTURE
+
+Use reusable components.
+
+Example:
+
+components/
+
+Sidebar
+
+MobileNav
+
+Header
+
+DashboardCard
+
+ProgressRing
+
+AttendanceCard
+
+TaskCard
+
+TaskBoard
+
+TaskModal
+
+PomodoroTimer
+
+FocusEnvironment
+
+BreakTimer
+
+CafeGame
+
+CoffeeMachine
+
+CustomerCard
+
+DrinkBuilder
+
+CafeCoins
+
+JournalEditor
+
+AnalyticsCharts
+
+AttendanceCalendar
+
+AchievementCard
+
+StreakCard
+
+Toast
+
+Modal
+
+EmptyState
+
+---
+
+# MOCK DATA
+
+Use realistic mock data for the prototype.
+
+Tasks:
+
+* Finish UI design
+* Complete cybersecurity research
+* Design portfolio page
+* Review SQL notes
+* Submit assignment
+* Research UI trends
+
+Attendance:
+
+At least 30 days of mock data.
+
+Analytics:
+
+At least 30 days of mock data.
+
+Journal:
+
+At least 3 previous entries.
+
+Achievements:
+
+Mix of unlocked and locked.
+
+Café:
+
+Multiple customers/orders.
+
+---
+
+# FRONTEND STATE
+
+Use React state/context.
+
+Use localStorage only when useful for prototype persistence.
+
+Persist things such as:
+
+* task completion
+* tasks
+* theme
+* journal entries
+* café coins
+* café upgrades
+* timer preferences
+* mock login state
+
+---
+
+# VERY IMPORTANT — FUTURE BACKEND COMPATIBILITY
+
+Although this is frontend-only, organize the code cleanly.
+
+Keep:
+
+UI components
+
+↓
+
+state/actions
+
+↓
+
+mock data layer
+
+Separate enough that later I can replace mock data with a real database without rebuilding the UI.
+
+Do NOT hard-code the entire application into individual pages.
+
+---
+
+# FINAL QUALITY BAR
+
+This should look like a **real premium startup product**, not an AI-generated template.
+
+Avoid:
+
+❌ generic dashboard cards everywhere
+
+❌ boring tables
+
+❌ default Tailwind styling
+
+❌ random gradients
+
+❌ excessive glassmorphism
+
+❌ childish UI
+
+❌ unfinished sections
+
+❌ placeholder text
+
+Instead create:
+
+✨ strong visual hierarchy
+
+✨ beautiful spacing
+
+✨ thoughtful empty states
+
+✨ premium typography
+
+✨ cozy café atmosphere
+
+✨ polished animations
+
+✨ satisfying interactions
+
+✨ consistent design system
+
+✨ responsive layouts
+
+✨ portfolio-level quality
+
+---
+
+# FINAL USER EXPERIENCE
+
+The finished frontend should feel like:
+
+LOGIN ☕
+
+↓
+
+DASHBOARD
+
+↓
+
+Punch In
+
+↓
+
+View Tasks
+
+↓
+
+Start Pomodoro
+
+↓
+
+Complete Focus Session
+
+↓
+
+Visit Break Café
+
+↓
+
+Make a tiny coffee
+
+↓
+
+Take Break
+
+↓
+
+Return to Focus
+
+↓
+
+Complete Tasks
+
+↓
+
+Write Journal
+
+↓
+
+Check Analytics
+
+↓
+
+Maintain Streak
+
+↓
+
+Unlock Achievements
+
+---
+
+# FINAL COMMAND
+
+Build the entire frontend now.
+
+Do NOT ask me to configure a database.
+
+Do NOT create a backend.
+
+Do NOT create Supabase.
+
+Do NOT create API endpoints.
+
+Do NOT stop at a landing page.
+
+Build all major screens and interactions.
+
+Use mock data wherever real data would normally be required.
+
+Make every navigation item functional.
+
+Make the prototype feel **complete, beautiful, fun, cozy, and addictive in a good way.**
+
+The final reaction I want from someone seeing this app is:
+
+# “WAITTT THIS IS ACTUALLY SO CUTE 😭☕✨”

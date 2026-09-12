@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "DAYFLOW Café"
+description = "A cozy productivity workspace for tracking tasks, attendance, focus sessions, restorative café breaks, journaling, analytics, and streaks with a polished frontend-only experience."
+version = "1.0.0"
+id = "artifacts/dayflow-cafe"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21671
+
+[services.development]
+run = "pnpm --filter @workspace/dayflow-cafe run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/dayflow-cafe", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/dayflow-cafe/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21671"
+BASE_PATH = "/"
